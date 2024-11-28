@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt's Developer Onboarding</title>
 </head>
+
 <body style="font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; color: #333;">
 
     <h1 style="color: #4CAF50; text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px;">
         Welcome to Matt's Developer Onboarding
     </h1>
 
-    <p style="font-size: 16px; text-align: center;">
-        <code style="background-color: #f9f9f9; padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; display: inline-block; font-family: 'Courier New', Courier, monospace;">
-            https://matts-fhir.com
-        </code>
-    </p>
+    <div style="max-width: 50%; margin: 0 auto;">
+        <p style="font-size: 16px; text-align: center;">
+            https://matts-fhir.com is a fully R4 compliant FHIR Server capable of processing the following FHIR
+            Resources:
+        </p>
 
-    <p style="font-size: 16px; text-align: center;">
-        is a fully R4 compliant FHIR Server capable of processing the following FHIR Resources:
-    </p>
-
-    <ul style="list-style-type: circle; margin: 20px auto; max-width: 400px; padding: 0; text-align: left;">
-        <li style="margin: 5px 0;">Patient</li>
-        <li style="margin: 5px 0;">Practitioner</li>
-        <li style="margin: 5px 0;">CareTeam</li>
-    </ul>
+        <ul style="list-style-type: circle; margin: 20px auto; max-width: 400px; padding: 0; text-align: left;">
+            <li style="margin: 5px 0;">Patient</li>
+            <li style="margin: 5px 0;">Practitioner</li>
+            <li style="margin: 5px 0;">CareTeam</li>
+        </ul>
+    </div>
 
     <div style="max-width: 50%; margin: 0 auto;">
         <h2 style="color: #333; text-align: left; border-bottom: 1px solid #ddd; padding-bottom: 5px;">
@@ -34,10 +33,29 @@
 
         <ul style="list-style-type: disc; padding-left: 20px;">
             <li style="margin: 10px 0;">
-                <strong>Get Credentials:</strong> Register with the FHIR server admin to obtain an API key or OAuth credentials.
+                <strong>Get Credentials:</strong> Register with the FHIR server admin to obtain an API key or OAuth
+                credentials.
             </li>
             <li style="margin: 10px 0;">
                 <strong>Attach to APIM Subscription Key:</strong> Ensure you attach your API key for secure access.
+            </li>
+        </ul>
+    </div>
+
+    <div style="max-width: 50%; margin: 0 auto;">
+        <h2 style="color: #333; text-align: left; border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+            Samples
+        </h2>
+
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li style="margin: 10px 0;">
+                Patient Postman sample payloads : <a href="https://sample-payloads.com">Sample Payloads</a>
+            </li>
+            <li style="margin: 10px 0;">
+                Practitioner Postman sample payloads : <a href="https://sample-payloads.com">Sample Payloads</a>
+            </li>
+            <li style="margin: 10px 0;">
+                CareTeam Postman sample payloads : <a href="https://sample-payloads.com">Sample Payloads</a>
             </li>
         </ul>
     </div>
@@ -47,4 +65,5 @@
     </p>
 
 </body>
+
 </html>
