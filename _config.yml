@@ -1,0 +1,41 @@
+# Site settings
+title: "Matts Developer Onboarding"
+description: "Developer onboarding for Matts FHIR Server."
+url: "https://matthewjnixon.github.io/clientpagesdemo/" # Replace with your actual GitHub Pages URL
+baseurl: "" # Leave blank if deploying to the root (e.g., username.github.io)
+
+# Author info
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+
+# Theme and plugins
+theme: minima # Replace with your chosen Jekyll theme
+plugins:
+  - jekyll-feed # RSS feed generator
+  - jekyll-sitemap # Sitemap generator
+  - jekyll-seo-tag # SEO tags
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Defaults for front matter
+defaults:
+  - scope:
+      path: "" # Applies to all files
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
