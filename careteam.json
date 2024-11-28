@@ -1,0 +1,38 @@
+{
+    "info": {
+        "name": "FHIR CareTeam API",
+        "_postman_id": "ijkl9012-3456-78mn-opqr-stuvwxyzabcd",
+        "description": "Postman collection for FHIR CareTeam resource.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create CareTeam",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/fhir+json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"resourceType\": \"CareTeam\",\n    \"name\": \"Diabetes Care Team\",\n    \"status\": \"active\",\n    \"category\": [\n        {\n            \"coding\": [\n                {\n                    \"system\": \"http://example.org/care-team-category\",\n                    \"code\": \"diabetes\",\n                    \"display\": \"Diabetes Management\"\n                }\n            ]\n        }\n    ],\n    \"subject\": {\n        \"reference\": \"Patient/example-patient\",\n        \"display\": \"John Smith\"\n    },\n    \"participant\": [\n        {\n            \"role\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/careteam-role\",\n                        \"code\": \"primary\",\n                        \"display\": \"Primary Care Provider\"\n                    }\n                ]\n            },\n            \"member\": {\n                \"reference\": \"Practitioner/example-practitioner\",\n                \"display\": \"Dr. Jane Doe\"\n            }\n        }\n    ]\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/CareTeam",
+                    "host": ["{{base_url}}"],
+                    "path": ["CareTeam"]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://matts-fhir.com",
+            "type": "string"
+        }
+    ]
+}

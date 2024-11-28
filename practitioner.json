@@ -1,0 +1,38 @@
+{
+    "info": {
+        "name": "FHIR Practitioner API",
+        "_postman_id": "efgh5678-1234-90ab-cdef-ghijklmnopqr",
+        "description": "Postman collection for FHIR Practitioner resource.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Practitioner",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/fhir+json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"resourceType\": \"Practitioner\",\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"family\": \"Doe\",\n            \"given\": [\n                \"Jane\",\n                \"M\"\n            ]\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1975-08-15\",\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"(555) 123-4567\",\n            \"use\": \"work\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"jane.doe@example.com\",\n            \"use\": \"work\"\n        }\n    ],\n    \"address\": [\n        {\n            \"use\": \"work\",\n            \"line\": [\n                \"456 Medical Plaza\"\n            ],\n            \"city\": \"Metropolis\",\n            \"state\": \"NY\",\n            \"postalCode\": \"10001\"\n        }\n    ]\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/Practitioner",
+                    "host": ["{{base_url}}"],
+                    "path": ["Practitioner"]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://matts-fhir.com",
+            "type": "string"
+        }
+    ]
+}
