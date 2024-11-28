@@ -1,0 +1,38 @@
+{
+    "info": {
+        "name": "FHIR Patient API",
+        "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+        "description": "Postman collection for FHIR Patient resource.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Patient",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/fhir+json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"resourceType\": \"Patient\",\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"family\": \"Smith\",\n            \"given\": [\n                \"John\",\n                \"A\"\n            ]\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1980-05-25\",\n    \"address\": [\n        {\n            \"use\": \"home\",\n            \"line\": [\n                \"123 Main Street\"\n            ],\n            \"city\": \"Springfield\",\n            \"state\": \"IL\",\n            \"postalCode\": \"62704\"\n        }\n    ]\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/Patient",
+                    "host": ["{{base_url}}"],
+                    "path": ["Patient"]
+                }
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://matts-fhir.com",
+            "type": "string"
+        }
+    ]
+}
